@@ -520,7 +520,7 @@ async function InitiateBrowser(action, prefs, one_lead, status) {
     },
     ignoreHTTPSErrors: true,
     headless: false,
-    ignoreDefaultArgs: ["--enable-automation", '--disable-extensions'], //--mute-audio
+    ignoreDefaultArgs: ["--enable-automation"], //--disable-extensions, --mute-audio
   };
 
   let browser = await puppeteer.launch(boptions);
