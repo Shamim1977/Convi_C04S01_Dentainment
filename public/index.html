@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Convi</title>
+      <meta content="" name="personal webpage">
+
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="favicon/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+
+      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+   </head>
+
+   <body style="margin: 5%;" class="d-flex align-items-center justify-content-center">
+      
+      <div class="card" style="width: 25rem;">
+         <img class="card-img-top" src="assets/conweb.png" alt="">
+         <div class="card-body">
+           <div style="text-align: center;"><i class="bi bi-hdd-network" style="font-size: 2rem; color: green;"></i></div>
+           <div style="text-align: center;" ><h5 class="card-title">Convi</h5></div>
+           <div style="text-align: center;" ><h5 class="card-title server_ip"></h5></div>
+           <p style="text-align: center;color: green;font-size: 18px;" class="card-text">The server is up &amp; running.</p>
+         </div>
+         <ul class="list-group list-group-flush">
+            <div style="text-align: center;">
+               <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+               <div>Loading, please allow us a moment...</div>
+            </div>
+         </ul>
+         <div style="text-align: center;" class="card-body">
+           <a href="http://convi.io" target="_blank" class="card-link">My Account</a>
+           <a href="." class="card-link">Reload</a>
+         </div>
+       </div>
+
+
+      <script src="vendor/popper/popper.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="vendor/jquery/jquery-3.6.0.min.js"></script>
+      <script>
+         $.get( "https://freeipapi.com/api/json", function (data) {
+            $('.server_ip').html(location.host);
+            let cont = '<div style="text-align: center;">';
+            cont += '<li class="list-group-item">Browser IP: '+data.ipAddress+'</li>';
+            cont += '<li class="list-group-item">Lat/Long: '+data.latitude + ' / '+data.longitude+'</li>';
+            cont += '<li class="list-group-item">Timezone: '+data.timeZone+'</li>';
+            cont += '<li class="list-group-item">Timezone: '+data.cityName + ' ' + data.zipCode + ' '+ data.regionName+'</li>';
+            cont += '<li class="list-group-item">Country: '+data.countryName+'</li>';
+            cont += '</div>';
+            $('.list-group-flush').html(cont);
+         });
+
+      </script>
+   </body>
+
+</html>
