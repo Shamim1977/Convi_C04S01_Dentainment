@@ -28,7 +28,7 @@ config.failsafe = config.assets+path.sep+"failsafe";
 config.downloads = config.assets+path.sep+"downloads"+path.sep+"reports";
 
 config.segment_prefix = 'supplementary_';
-config.extension = './extension/istilldontcareaboutcookies.crx';
+config.extension = './extension/idontcare'; //or the .crx file if available
 
 config.email_templates = {
     error:'',
