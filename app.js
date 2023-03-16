@@ -14,7 +14,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request"); //don't uninstall!
 var cron = require("node-cron");
-const urlExists = require("url-exists");
 const axios = require("axios");
   //const escape = require("sql-escape");
 const readline = require("readline");

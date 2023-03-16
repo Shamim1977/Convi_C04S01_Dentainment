@@ -42,7 +42,6 @@
     "sql-escape": "^1.0.1",
     "systeminformation": "^5.11.22",
     "tunnel": "0.0.6",
-    "url-exists": "^1.0.3",
     "util": "^0.12.4",
     "validator": "^13.7.0",
     "xvfb": "^0.4.0"
